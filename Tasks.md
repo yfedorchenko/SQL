@@ -19,6 +19,8 @@ Given a table of purchases by date, calculate the month-over-month percentage ch
 - **Columns**:
   - `created_at`: The date of the transaction.
   - `value`: The revenue value of the transaction.
+ 
+![First 5 rows of the data](screenshots/1_data.png)
 
 ### SQL Solution
 ```sql
@@ -33,6 +35,8 @@ SELECT formatted_date,
        ROUND(((revenue - prev_revenue) / prev_revenue) * 100, 2) AS running_diff_perc
 FROM grouped_table;
 ```
+
+![Result](screenshots/1_result.png)
 
 ---
 
