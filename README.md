@@ -14,11 +14,10 @@ The SQL tasks solved in this repository include:
 4. **Highest Energy Consumption**: Finding the date with the highest total energy consumption to optimize energy usage.
 5. **Word Occurrences in Drafts**: Counting the frequency of words in text drafts to gain insights into text analysis.
 
-Detailed solutions for these tasks can be found in the `Tasks.md` file, where each task is described in detail along with the SQL code used to solve it.
+Detailed solutions for these tasks can be found in the [`Tasks.md`](./Tasks.md) file, where each task is described in detail along with the SQL code used to solve it.
 
 ## Future Goals
 - Continue expanding the repository with more SQL tasks to refine my skills in advanced query writing.
-- Integrate data visualization techniques to present the results of complex SQL queries visually.
 - Evolve this repository from a collection of task-based solutions into a comprehensive data analysis project.
 
 ## Contact Information
