@@ -19,8 +19,7 @@ Given a table of purchases by date, calculate the month-over-month percentage ch
 - **Columns**:
   - `created_at`: The date of the transaction.
   - `value`: The revenue value of the transaction.
- 
-![First 5 rows of the data](screenshots/1_data.png)
+  - ![First 5 rows of the data](screenshots/1_data.png)
 
 ### SQL Solution
 ```sql
@@ -35,7 +34,6 @@ SELECT formatted_date,
        ROUND(((revenue - prev_revenue) / prev_revenue) * 100, 2) AS running_diff_perc
 FROM grouped_table;
 ```
-
 ![Result](screenshots/1_result.png)
 
 ---
@@ -50,6 +48,7 @@ Write a query to count the net difference between the number of products compani
   - `year`: The year of product launches.
   - `company_name`: Name of the company.
   - `product_name`: Name of the product.
+  - ![First 5 rows of the data](screenshots/2_data.png)
  
 ### SQL Solution
 ```sql
@@ -69,6 +68,7 @@ SELECT a.company_name, (a.total_product - b.total_product) AS total_launch
 FROM query1 a
 INNER JOIN query2 b ON a.company_name = b.company_name;
 ```
+![Result](screenshots/2_result.png)
 
 ## Risky Projects
 
@@ -86,14 +86,18 @@ You'll need to prorate the cost of the employees to the duration of the project.
     - `budget`: Budget allocated for the project.
     - `start_date`: Project start date.
     - `end_date`: Project end date.
+    - ![First 5 rows of the data](screenshots/3.1_data.png)
+
   - **linkedin_emp_projects**:
     - `emp_id`: Employee identifier.
     - `project_id`: Project identifier.
+    - ![First 5 rows of the data](screenshots/3.2_data.png)
   - **linkedin_employees**:
     - `id`: Employee identifier.
     - `first_name`: First name of the employee.
     - `last_name`: Last name of the employee.
     - `salary`: Annual salary of the employee.
+    - ![First 5 rows of the data](screenshots/3.3_data.png)
 
 ### SQL Solution
 ```sql
@@ -109,6 +113,7 @@ SELECT title, budget, prorated_expenses
 FROM sub_table
 WHERE prorated_expenses > budget;
 ```
+![Result](screenshots/3_result.png)
 
 ## Highest Energy Consumption
 
@@ -121,12 +126,15 @@ Find the date with the highest total energy consumption from the Meta/Facebook d
   - **fb_eu_energy**:
     - `date`: Date of the energy consumption record.
     - `consumption`: Amount of energy consumed (in units).
+    - ![First 5 rows of the data](screenshots/4.1_data.png)
   - **fb_asia_energy**:
     - `date`: Date of the energy consumption record.
     - `consumption`: Amount of energy consumed (in units).
+    - ![First 5 rows of the data](screenshots/4.2_data.png)
   - **fb_na_energy**:
     - `date`: Date of the energy consumption record.
     - `consumption`: Amount of energy consumed (in units).
+    - ![First 5 rows of the data](screenshots/4.3_data.png)
 
 ### SQL Solution
 ```sql
@@ -147,6 +155,7 @@ FROM date_totals
 WHERE total = (SELECT MAX(total) FROM date_totals)
 ORDER BY total DESC;
 ```
+![Result](screenshots/4_result.png)
 
 ## Word Occurrences in Drafts
 
@@ -158,6 +167,7 @@ Find the number of times each word appears in drafts. Output the word along with
 - **Columns**:
   - `filename`: Name of the file.
   - `contents`: The text content of the file.
+  - ![First 5 rows of the data](screenshots/5_data.png)
 
 ### SQL Solution
 ```sql
@@ -172,3 +182,4 @@ FROM sub_table
 GROUP BY word
 ORDER BY count DESC;
 ```
+![Result](screenshots/5_result.png)
